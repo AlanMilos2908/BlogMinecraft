@@ -18,3 +18,43 @@ body {
     text-align: center;
     font-size: 28px;
 }
+/* 0. Reset general */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* 1. Fondo general del body */
+body {
+    background-color: #6a0dad; /* Morado */
+    font-family: Arial, sans-serif;
+}
+
+/* 2. Barra superior */
+.top-bar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+}
+
+/* 3. Banner */
+.banner {
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+.banner-img {
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 12px;
+    opacity: 0.9;
+}
+
+
+
+
+
