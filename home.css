@@ -18,3 +18,19 @@ body {
     text-align: center;
     font-size: 28px;
 }
+
+/* 3. Banner */
+.banner {
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+.banner-img {
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 12px;
+    opacity: 0.9;
+}
+
+
