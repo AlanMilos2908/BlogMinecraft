@@ -1,11 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MODS</title>
+    <title>Mods - Minecraft</title>
+    <link rel="stylesheet" href="mods.css">
 </head>
 <body>
-    
+
+<header>
+    <h1></h1>Mods de Minecraft</h1>
+</header>
+
+<section class="busqueda">
+    <input type="text" id="buscador" placeholder="Buscar mod...">
+</section>
+
+<section class="contenedor">
+
+    <div class="card">
+        <img src="img/optifine.jpg" alt="Optifine">
+        <h2>OptiFine</h2>
+        <p class="descripcion">
+            Mejora el rendimiento del juego y añade soporte para shaders y configuraciones gráficas avanzadas.
+        </p>
+        <button onclick="leerMas(this)">Leer más</button>
+    </div>
+
+    <div class="card">
+        <img src="img/jei.jpg" alt="Just Enough Items">
+        <h2>Just Enough Items (JEI)</h2>
+        <p class="descripcion">
+            Permite ver recetas de crafteo dentro del juego y facilita la búsqueda de objetos.
+        </p>
+        <button onclick="leerMas(this)">Leer más</button>
+    </div>
+
+    <div class="card">
+        <img src="img/biomes.png" alt="Biomes O Plenty">
+        <h2>Biomes O' Plenty</h2>
+        <p class="descripcion">
+            Añade más de 80 biomas nuevos con árboles, plantas y terrenos diferentes.
+        </p>
+        <button onclick="leerMas(this)">Leer más</button>
+    </div>
+
+    <div class="card">
+        <img src="img/create.jpg" alt="Create Mod">
+        <h2>Create Mod</h2>
+        <p class="descripcion">
+            Introduce maquinaria mecánica para automatizar procesos usando engranajes y energía.
+        </p>
+        <button onclick="leerMas(this)">Leer más</button>
+    </div>
+
+    <div class="card">
+        <img src="img/alexmobs.jpg" alt="Alex Mobs">
+        <h2>Alex's Mobs</h2>
+        <p class="descripcion">
+            Agrega más de 80 animales nuevos al juego con comportamientos realistas.
+        </p>
+        <button onclick="leerMas(this)">Leer más</button>
+    </div>
+
+    <div class="card">
+        <img src="img/twilight.jpg" alt="Twilight Forest">
+        <h2>Twilight Forest</h2>
+        <p class="descripcion">
+            Añade una nueva dimensión llena de jefes, mazmorras y aventuras.
+        </p>
+        <button onclick="leerMas(this)">Leer más</button>
+    </div>
+
+</section>
+
+<script>
+
+function toggleModo(){
+    document.body.classList.toggle("creeper");
+}
+
+function leerMas(btn){
+    const card = btn.parentElement;
+    const texto = card.querySelector(".descripcion");
+
+    if(btn.innerText === "Leer más"){
+        texto.innerText += " Este mod es muy popular en la comunidad y se usa en muchos modpacks.";
+        btn.innerText = "Leer menos";
+    }else{
+        location.reload();
+    }
+}
+
+document.getElementById("buscador").addEventListener("keyup", function(){
+    let filtro = this.value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(card =>{
+        let titulo = card.querySelector("h2").innerText.toLowerCase();
+        card.style.display = titulo.includes(filtro) ? "block" : "none";
+    });
+});
+
+</script>
+
 </body>
 </html>
