@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Noticias - Minecraft Mods</title>
+    <link rel="stylesheet" href="news.css">
+</head>
+<body>
+
+<header>
+    <h1>🟩 Noticias Mods Minecraft</h1>
+    <button onclick="toggleModo()">🌙 Modo Creeper</button>
+</header>
+
+<section class="busqueda">
+    <input type="text" id="buscador" placeholder="Buscar mod...">
+</section>
+
+<section class="contenedor">
+
+    <div class="card">
+        <img src="img/biomes.png" alt="Biomes O Plenty">
+        <h2>Biomes O' Plenty</h2>
+        <p class="descripcion">
+            Añade más de 80 biomas nuevos al mundo de Minecraft.
+        </p>
+        <button onclick="leerMas(this)">Leer más</button>
+    </div>
+
+    <div class="card">
+        <img src="img/create.jpg" alt="Create Mod">
+        <h2>Create Mod</h2>
+        <p class="descripcion">
+            Automatización avanzada con engranajes y maquinaria industrial.
+        </p>
+        <button onclick="leerMas(this)">Leer más</button>
+    </div>
+
+    <div class="card">
+        <img src="img/alexmobs.jpg" alt="Alex's Mobs">
+        <h2>Alex's Mobs</h2>
+        <p class="descripcion">
+            Más de 80 criaturas nuevas con comportamientos únicos.
+        </p>
+        <button onclick="leerMas(this)">Leer más</button>
+    </div>
+
+</section>
+
+<script src="news.js"></script>
+</body>
+</html>
