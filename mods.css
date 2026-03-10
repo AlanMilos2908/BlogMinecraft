@@ -12,23 +12,12 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    align-items: center;
     font-size: 28px;
 }
 
 header h1 {
     margin-bottom: 10px;
-}
-
-button {
-    background: #4CAF50;
-    border: 3px solid black;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-button:hover {
-    animation: shake 0.3s infinite;
 }
 
 .busqueda {
@@ -49,6 +38,34 @@ button:hover {
     gap: 2rem;
     flex-wrap: wrap;
     padding: 2rem;
+}
+
+.boton-regreso{
+    position: absolute;
+    left: 20px;
+    top: 8px;
+    background: linear-gradient(145deg, #4CAF50, #2e7d32);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+}
+
+/* efecto hover */
+.boton-regreso:hover{
+    background: linear-gradient(145deg, #66bb6a, #388e3c);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+}
+
+/* efecto al hacer click */
+.boton-regreso:active{
+    transform: scale(0.95);
 }
 
 .card {
@@ -75,10 +92,3 @@ button:hover {
     margin-bottom: 10px;
 }
 
-@keyframes shake {
-    0% { transform: translateX(0px); }
-    25% { transform: translateX(-3px); }
-    50% { transform: translateX(3px); }
-    75% { transform: translateX(-3px); }
-    100% { transform: translateX(0px); }
-}

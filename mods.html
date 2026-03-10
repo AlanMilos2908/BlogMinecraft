@@ -8,7 +8,11 @@
 <body>
 
 <header>
-    <h1></h1>Mods de Minecraft</h1>
+    <button class="boton-regreso" onclick="window.location.href='home.html'">
+Inicio
+</button>
+    <h1>Mods de Minecraft</h1>
+    <div></div>
 </header>
 
 <section class="busqueda">
@@ -23,7 +27,6 @@
         <p class="descripcion">
             Mejora el rendimiento del juego y añade soporte para shaders y configuraciones gráficas avanzadas.
         </p>
-        <button onclick="leerMas(this)">Leer más</button>
     </div>
 
     <div class="card">
@@ -32,7 +35,6 @@
         <p class="descripcion">
             Permite ver recetas de crafteo dentro del juego y facilita la búsqueda de objetos.
         </p>
-        <button onclick="leerMas(this)">Leer más</button>
     </div>
 
     <div class="card">
@@ -41,7 +43,6 @@
         <p class="descripcion">
             Añade más de 80 biomas nuevos con árboles, plantas y terrenos diferentes.
         </p>
-        <button onclick="leerMas(this)">Leer más</button>
     </div>
 
     <div class="card">
@@ -50,7 +51,6 @@
         <p class="descripcion">
             Introduce maquinaria mecánica para automatizar procesos usando engranajes y energía.
         </p>
-        <button onclick="leerMas(this)">Leer más</button>
     </div>
 
     <div class="card">
@@ -59,7 +59,6 @@
         <p class="descripcion">
             Agrega más de 80 animales nuevos al juego con comportamientos realistas.
         </p>
-        <button onclick="leerMas(this)">Leer más</button>
     </div>
 
     <div class="card">
@@ -68,28 +67,11 @@
         <p class="descripcion">
             Añade una nueva dimensión llena de jefes, mazmorras y aventuras.
         </p>
-        <button onclick="leerMas(this)">Leer más</button>
     </div>
 
 </section>
 
 <script>
-
-function toggleModo(){
-    document.body.classList.toggle("creeper");
-}
-
-function leerMas(btn){
-    const card = btn.parentElement;
-    const texto = card.querySelector(".descripcion");
-
-    if(btn.innerText === "Leer más"){
-        texto.innerText += " Este mod es muy popular en la comunidad y se usa en muchos modpacks.";
-        btn.innerText = "Leer menos";
-    }else{
-        location.reload();
-    }
-}
 
 document.getElementById("buscador").addEventListener("keyup", function(){
     let filtro = this.value.toLowerCase();
