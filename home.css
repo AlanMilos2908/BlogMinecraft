@@ -28,8 +28,8 @@ body {
 
 /* Si quieres que la imagen del banner tenga bordes redondeados y algo de transparencia */
 .banner-img {
-    width: 90%;
-    max-width: 1000px;
+    width: 70%;
+    max-width: 700px;
     border-radius: 12px;
     /* Puedes añadir un filtro de opacidad si quieres que el fondo morado se vea debajo */
     opacity: 0.9;
